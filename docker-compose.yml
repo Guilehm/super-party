@@ -5,10 +5,9 @@ services:
   nginx:
     network_mode: bridge
     container_name: nginx
-    build: ./super-granola/
     image: nginx:1.13.3
     volumes:
-      - ./nginx_data:/etc/nginx/nginx.conf
+      - ./super-granola/nginx.conf:/etc/nginx/nginx.conf
     expose:
       - 80
     ports:

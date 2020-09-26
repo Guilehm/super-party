@@ -1,3 +1,6 @@
 [submodule "super-granola"]
 	path = super-granola
 	url = git@github.com:Guilehm/super-granola.git
+[submodule "super-muffin"]
+	path = super-muffin
+	url = git@github.com:Guilehm/super-muffin.git
