@@ -122,6 +122,66 @@ services:
     environment:
       PORT: 80
 
+  muffin_eleven:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_eleven
+    expose:
+      - 80
+    ports:
+      - 4011:80
+    environment:
+      PORT: 80
+
+  muffin_twelve:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_twelve
+    expose:
+      - 80
+    ports:
+      - 4012:80
+    environment:
+      PORT: 80
+
+  muffin_thirteen:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_thirteen
+    expose:
+      - 80
+    ports:
+      - 4013:80
+    environment:
+      PORT: 80
+
+  muffin_fourteen:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_fourteen
+    expose:
+      - 80
+    ports:
+      - 4014:80
+    environment:
+      PORT: 80
+
+  muffin_fifteen:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_fifteen
+    expose:
+      - 80
+    ports:
+      - 4015:80
+    environment:
+      PORT: 80
+
 
   nginx:
     network_mode: bridge
@@ -147,6 +207,7 @@ services:
       - muffin_eight:muffin_eight
       - muffin_nine:muffin_nine
       - muffin_ten:muffin_ten
+      - muffin_eleven:muffin_eleven
 
   postgres:
     image: postgres:11.0-alpine
