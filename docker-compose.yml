@@ -10,7 +10,115 @@ services:
     expose:
       - 80
     ports:
-      - 4000:80
+      - 4001:80
+    environment:
+      PORT: 80
+
+  muffin_two:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_two
+    expose:
+      - 80
+    ports:
+      - 4002:80
+    environment:
+      PORT: 80
+
+  muffin_three:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_three
+    expose:
+      - 80
+    ports:
+      - 4003:80
+    environment:
+      PORT: 80
+
+  muffin_four:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_four
+    expose:
+      - 80
+    ports:
+      - 4004:80
+    environment:
+      PORT: 80
+
+  muffin_five:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_five
+    expose:
+      - 80
+    ports:
+      - 4005:80
+    environment:
+      PORT: 80
+
+  muffin_six:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_six
+    expose:
+      - 80
+    ports:
+      - 4006:80
+    environment:
+      PORT: 80
+
+  muffin_seven:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_seven
+    expose:
+      - 80
+    ports:
+      - 4007:80
+    environment:
+      PORT: 80
+
+  muffin_eight:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_eight
+    expose:
+      - 80
+    ports:
+      - 4008:80
+    environment:
+      PORT: 80
+
+  muffin_nine:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_nine
+    expose:
+      - 80
+    ports:
+      - 4009:80
+    environment:
+      PORT: 80
+
+  muffin_ten:
+    image: muffin
+    build: ./super-muffin/
+    network_mode: bridge
+    container_name: muffin_ten
+    expose:
+      - 80
+    ports:
+      - 4010:80
     environment:
       PORT: 80
 
@@ -30,6 +138,15 @@ services:
       - 80:80
     links:
       - muffin:muffin
+      - muffin_two:muffin_two
+      - muffin_three:muffin_three
+      - muffin_four:muffin_four
+      - muffin_five:muffin_five
+      - muffin_six:muffin_six
+      - muffin_seven:muffin_seven
+      - muffin_eight:muffin_eight
+      - muffin_nine:muffin_nine
+      - muffin_ten:muffin_ten
 
   postgres:
     image: postgres:11.0-alpine
